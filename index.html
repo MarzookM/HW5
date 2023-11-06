@@ -2,13 +2,16 @@
 <html>
 <body>
 
-<h2>Use JavaScript to Change Text</h2>
-<p>This example writes "Hello JavaScript!" into an HTML element with id="demo":</p>
+<h2 id = "demo">Use JavaScript to Change Text</h2>
 
-<p id="demo"></p>
-
+<p id="new">JavaScript can change the style of an HTML element.</p>
 <script>
-document.getElementById("demo").innerHTML = "Hello JavaScript!";
+document.getElementById("demo").innerHTML = "What is up Java Script!";
+function myFunction() {
+document.getElementById("new").style.fontSize = "100px"; 
+document.getElementById("new").style.color = "purple";
+document.getElementById("new").style.backgroundColor = "red"; 
+}
 </script> 
 
 </body>
