@@ -1,42 +1,43 @@
 <!DOCTYPE html>
 <html>
-<body>
+  <body>
+    <h2 id="demo">Use JavaScript to Change Text</h2>
+    <p id="new">JavaScript can change the style of an HTML element.</p>
+    <button type="button" onclick="displayDate()">Click me to display Date and Time.</button>
+    <p id="demoz"></p>
+    
+    <script>
+      // JavaScript for changing text and styles
+      document.getElementById("demo").innerHTML = "What is up JavaScript!";
+      
+      function myFunction() {
+        var element = document.getElementById("new");
+        element.style.fontSize = "10px";
+        element.style.color = "purple";
+        element.style.backgroundColor = "red";
+      }
 
-<h2 id = "demo">Use JavaScript to Change Text</h2>
+      function displayDate() {
+        var dateElement = document.getElementById("demoz");
+        dateElement.innerHTML = Date();
+      }
+      
+      function ou(sw) {
+        var pic;
+        if (sw == 0) {
+          pic = "letsgo.jpg";
+        } else {
+          pic = "Oklahoma-Sooners-Logo.jpg";
+        }
+        document.getElementById('myImage').src = pic;
+      }
+    </script>
 
-<p id="new">JavaScript can change the style of an HTML element.</p>
+    <button type="button" onclick="myFunction()">Click Me!</button>
+    <img id="myImage" src="letsgo.jpg" width="100" height="180">
+    <button type="button" onclick="ou(0)">Lets go</button>
+    <button type="button" onclick="ou(1)">ou</button>
 
-<button type="button"
-onclick="document.getElementById('demoz').innerHTML = Date()">
-Click me to display Date and Time.</button>
-<p id="demoz"></p>
-
-<script>
-document.getElementById("demo").innerHTML = "What is up Java Script!";
-function myFunction() {
-document.getElementById("new").style.fontSize = "-10px"; 
-document.getElementById("new").style.color = "purple";
-document.getElementById("new").style.backgroundColor = "red"; 
-}
-function ou(sw) {
-  var pic;
-  if (sw == 0) {
-    pic = "letsgo.jpg"
-  } else {
-    pic = "Oklahoma-Sooners-Logo.jpg"
-
-  }  
-  document.getElementById('myImage').src = pic;
-}
-
-</script> 
-<button type="button" onclick="myFunction()">Click Me!</button>
-<img id="myImage" src="letsgo.jpg" width="100" height="180">
-<button type="button" onclick="ou(0)">Lets go</button>
-<button type="button" onclick="ou(1)">ou</button>
-
-  <object data="ou.mp4" width="400" height="300"></object>
-
-  
-</body>
+    <object data="ou.mp4" width="400" height="300"></object>
+  </body>
 </html>
